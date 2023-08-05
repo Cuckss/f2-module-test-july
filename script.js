@@ -69,27 +69,27 @@ function selectLogo(data){
     let imageUrl = "";
     let desc = "";
     if(data.weather[0].main === "Clear" || data.weather[0].main === "Sunny"){
-        imageUrl = "Resources/Moon";
+        imageUrl = "resources/";
         desc = "Sunny";
     }
     
     else if(data.weather[0].main === "Storm" || Math.round(data.wind.speed) >= 15){
-        imageUrl = "Resources/icons8-wind-64.png";
+        imageUrl = "resources/windy(2).png";
         desc = "Windy";
         
     }
     
     else if(data.weather[0].main === "Rain" || Math.round(data.rain) >= 10){
-        imageUrl = "Resources/Moon cloud mid rain.png";
+        imageUrl = "resources/Rainy.png";
         desc = "Rainy";
         
     }
     else if(data.weather[0].main === "Haze" || data.weather[0].main === "Cloud" || Math.round(data.clouds) >= 65){
-        imageUrl = "Resources/icons8-clouds-64.png";
+        imageUrl = "resources/cloudy.png";
         desc = "Cloudy";
         
     }else{
-        imageUrl = "Resources/icons8-partly-cloudy-day-64.png";
+        imageUrl = "resources/Tornado.png";
         desc = "Partialy Cloudy";
 
     }
